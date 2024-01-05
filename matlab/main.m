@@ -4,7 +4,8 @@ end
 
 disp('Before:')
 disp(py.sys.path)
-modpaths = {fullfile(pwd, 'moduledir'), '/tmp/misc_modules'};
+modpaths = {fullfile(pwd, 'moduledir'), ...
+            fullfile(pwd, '..', 'misc_modules')};
 for k = 1:numel(modpaths)
     modpath = modpaths{k};
 
